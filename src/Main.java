@@ -65,7 +65,8 @@ public class Main {
         double totalBank = 0;
         int salaryBank = 29000;
         for(int i = 1; i <= 12; i++){
-            totalBank = totalBank + salaryBank + (totalBank / 100);
+            totalBank = totalBank + totalBank/100;
+            totalBank = totalBank + salaryBank;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + totalBank + " рублей");
         }
 
