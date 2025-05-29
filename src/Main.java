@@ -62,12 +62,13 @@ public class Main {
 
         //Задача 9
         //Перепишите решение задачи выше при условии, что деньги вы откладывать будете не «в банку», а в банк под проценты — 12% годовых. Выведите сумму накоплений за каждый месяц в консоль в формате: «Месяц …, сумма накоплений равна … рублей».
-        double totalBank = 0;
-        int salaryBank = 29000;
-        for(int i = 1; i <= 12; i++){
-            totalBank = totalBank + totalBank/100;
-            totalBank = totalBank + salaryBank;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + totalBank + " рублей");
+
+        int monthlyContribution = 29000;
+        double interestRate = 0.01; // 1% в месяц
+        double totalInBank = 0;
+        for (int month = 1; month <= 12; month++) {
+            totalInBank = (totalInBank + monthlyContribution) * (1 + interestRate);
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + (int) totalInBank + " рублей");
         }
 
         //Задача 10
